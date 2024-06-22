@@ -20,4 +20,7 @@ python scripts/generate_data.py
 - `make run` or `docker run --rm --name rev-insight -v ./data/:/app/data -it rev-insight:v1 python3 main.py data/orders.csv data/report.xlsx`
 
 ## Run Tests
-- `make test` or `docker run -it --rm --name rev-insight-test $(IMAGE_NAME) python3 -m pytest -v tests
+- `make test` or `docker run -it --rm --name rev-insight-test $(IMAGE_NAME) python3 -m pytest -v tests`
+
+## Get Coverage Report
+- `make cov` or `docker run -it --rm --name rev-insight-cov $(IMAGE_NAME) python3 -m pytest --cov=app tests/`
