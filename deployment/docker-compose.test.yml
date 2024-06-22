@@ -1,0 +1,8 @@
+services:
+  rev-insight:
+    image: rev-insight:v1
+    container_name: rev-insight-test
+    build:
+      context: .
+      dockerfile: ../Dockerfile
+    command: ["python3", "-m", "pytest", "-v", "tests/"]

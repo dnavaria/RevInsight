@@ -1,0 +1,12 @@
+services:
+  rev-insight:
+    image: rev-insight:v1
+    container_name: rev-insight
+
+    build:
+      context: .
+      dockerfile: ../Dockerfile
+    command: ["python3", "main.py", "data/orders.csv", "data/report.xlsx"]
+
+    volumes:
+      - ../data:/app/data

@@ -1,0 +1,14 @@
+data/
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+db.sqlite3
+.git
+.deployment
+.env
+.venv
+*.log
+deployment/
+scripts/
