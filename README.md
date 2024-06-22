@@ -14,7 +14,7 @@ python scripts/generate_data.py
 - If you don't have make installed, you can run the commands from the `Makefile` directly.
 
 ## Build Container
-- `make build` or `docker build -t revinsight:v1 .`
+- `make build` or `docker build -t rev-insight:v1 .`
 
 ## Run Container
 - `make run` or `docker run --rm --name rev-insight -v ./data/:/app/data -it rev-insight:v1 python3 main.py data/orders.csv data/report.xlsx`
