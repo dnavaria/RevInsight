@@ -9,20 +9,20 @@ def generate_data(num_orders=1000, num_products=256):
 
     # Defining the range of dates for the orders
     start_date = pd.to_datetime('2021-01-01')
-    end_date = pd.to_datetime('2023-01-01')
+    end_date = pd.to_datetime('2030-01-01')
 
     # Generating a list of unique products
     unique_products = []
     for _ in range(num_products):
         product_name = fake.word().capitalize() + ' ' + fake.word().capitalize()
-        product_id = np.random.randint(1000, 2000)  # Product IDs between 1000 and 1999
-        product_price = round(np.random.uniform(10, 500), 2)  # Prices between $10 and $500
+        product_id = np.random.randint(1000, 10000)  # Product IDs between 1000 and 1999
+        product_price = round(np.random.uniform(10, 5000), 2)  # Prices between $10 and $500
         unique_products.append((product_id, product_name, product_price))
 
     # Creating random data for each column based on the schema
-    customer_ids = np.random.randint(1, 300, num_orders)  # Assuming 300 unique customers
+    customer_ids = np.random.randint(1, 30000, num_orders)  # Assuming 300 unique customers
     order_dates = pd.to_datetime(np.random.choice(pd.date_range(start_date, end_date), num_orders))
-    quantities = np.random.randint(1, 10, num_orders)  # Quantity between 1 and 9
+    quantities = np.random.randint(1, 100, num_orders)  # Quantity between 1 and 9
 
     # Selecting a random product for each order by index
     indices = np.random.randint(0, num_products, num_orders)
